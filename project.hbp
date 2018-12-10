@@ -1,0 +1,21 @@
+# hbmk2 make. Build app multilingual
+# v1.0 26-11-2018
+# (C)2018 Joaquim Ferrer Godoy <quim_ferrer@yahoo.es>
+#
+# compiler flags
+-n -q0 -w3 -static
+-po=po/lang
+
+# linker
+-Lc:\hb32\lib\win\bcc
+
+# languages
+po/lang.%{hb_lng}.po
+-hbl=hbl/lang.%{hb_lng}.hbl
+-lng=en,es,fr
+
+# output
+-otest
+
+# sources
+test.prg
